@@ -22,8 +22,19 @@ function highlightStars(rating) {
 stars.forEach(star => {
     star.addEventListener('click', () => {
         currentRating = parseInt(star.getAttribute('data-value'));
-        selectedRating.textContent = `${currentRating} estrelas`; // Corrigido para interpolação de string
+        selectedRating.textContent = `${currentRating} estrelas`;
         highlightStars(currentRating);
+    });
+
+    // Adicionar um efeito visual quando selected o mouse sobre as estrelas
+    star.addEventListener('mouseover', () => {
+        let rating = parseInt(star.getAttribute('data-value'));
+        highlightStars(rating);
+    });
+
+    // Manter a seleção atual após o mouse sair
+    star.addEventListener('mouseout', () => {
+        highlightStars(currentRating);  // Manter a seleção atual após o mouse sair
     });
 });
 
@@ -42,7 +53,7 @@ submitButton.addEventListener('click', () => {
         feedback.textContent = 'Por favor, selecione uma avaliação antes de enviar!';
         feedback.style.color = 'red';
     } else {
-        feedback.textContent = `Obrigado por avaliar ${selectedGame} com ${currentRating} estrelas!`;  // Corrigido para interpolação de string
+        feedback.textContent = `Obrigado por avaliar ${selectedGame} com ${currentRating} estrelas!`;
         feedback.style.color = '#4CAF50';
         // Aqui você poderia enviar a avaliação para um servidor, por exemplo
         // sendRatingToServer(selectedGame, currentRating);
@@ -52,5 +63,6 @@ submitButton.addEventListener('click', () => {
 // Função fictícia para enviar a avaliação ao servidor
 function sendRatingToServer(game, rating) {
     // Simulação de envio de dados
-    console.log(`Avaliação enviada para ${game}: ${rating} estrelas`); // Corrigido para interpolação de string
+    console.log(`Avaliação enviada para ${game}: ${rating} estrelas`);
 }
+

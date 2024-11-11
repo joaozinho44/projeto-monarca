@@ -41,16 +41,24 @@ select {
     margin-bottom: 20px;
 }
 
+/* Estilo das estrelas */
 .star {
-    font-size: 40px;
+    font-size: 30px;
+    color: gray; /* Cor inicial das estrelas */
     cursor: pointer;
-    color: #ccc;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease; /* Transição suave para a cor */
 }
 
-.star:hover, .star.selected {
-    color: #ffbc00;
+/* Cor das estrelas selecionadas */
+.star.selected {
+    color: yellow; /* Cor das estrelas selecionadas */
 }
+
+/* Opcional: Cor ao selecionadas o mouse */
+.star:hover {
+    color: gold; /* Cor ao selecionadas o mouse */
+}
+
 
 button {
     background-color: #4CAF50;
