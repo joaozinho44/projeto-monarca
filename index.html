@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação de Jogos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Avalie o Jogo Online</h1>
+        <label for="game-select">Escolha um jogo:</label>
+        <select id="game-select">
+            <option value="callofduty">Call of Duty</option>
+            <option value="gta5">GTA 5</option>
+            <option value="ark">ARK</option>
+            <option value="helldivers2">Helldivers 2</option>
+            <option value="cyberpunk2077">Cyberpunk 2077</option>
+            <option value="tekken8">Tekken 8</option>
+            <option value="residentEvil4">Resident Evil 4</option>
+            <option value="fortnite">Fortnite</option>
+            <option value="eldenRing">Elden Ring</option>
+            <option value="lastOfUs">The Last of Us</option>
+            <option value="silentHill">Silent Hill: The Short Message</option>
+            <option value="jujutsuKaisen">Jujutsu Kaisen Cursed Clash</option>
+            <option value="dragonsDogma2">Dragon’s Dogma 2</option>
+            <option value="dragonsDogma">Dragon's Dogma</option>
+        </select>
+
+        <div class="rating">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+        </div>
+
+        <div class="message">
+            <p>Avaliação: <span id="selected-rating">Nenhuma avaliação</span></p>
+        </div>
+        <button id="submit-rating">Enviar Avaliação</button>
+        <div id="feedback" class="feedback"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
